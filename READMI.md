@@ -1,59 +1,101 @@
-Python (Django Rest Framework) Test Task
 
-This project is a Django-based REST API for Event Management. It allows users to create, view, update, and delete events, as well as handle user registrations for these events. The API documentation is available in Swagger.
+# Project Title
 
+This is a Django Rest Api - test task project.
 
-Installation
+## Getting Started
 
-Clone the repository:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-git clone https://github.com/your_username/your_project.git
+### Prerequisites
 
-Navigate to the project directory:
+You need to have Python 3.11 on your machine. 
 
-cd your_project
+### Installing
 
-Install dependencies:
+Clone the repository to your local machine:
 
+```bash
+git clone https://github.com/Por4ini/test-task.git
+```
+
+Navigate to the project directory
+
+Create virtual env:
+
+```bash
+python -m venv env
+source env/bin/activate
+```
+
+Install the required packages:
+
+```bash
 pip install -r requirements.txt
-
-Run migrations:
+python manage.py makemigrations
 python manage.py migrate
+```
 
-Create admin:
+## Testing project 
+Run the tests
+```bash
+python manage.py test
+```
+
+## Django Admin
+For using Django Admin you need to create superuser:
+```bash
 python manage.py createsuperuser
+```
 
-Start the development server:
+
+### Running the Application Locally
+
+To run the application, execute the following command in the project directory:
+
+```bash
 python manage.py runserver
+```
 
-API Documentation
-
-The API endpoints are documented in Swagger. Access the documentation by running the server and visiting the following URL in your browser:
-
-
+### Django Admin
+To access the Django Admin panel, navigate to:
+```bash
+http://localhost:8000/admin
+```
+##API Documentation
+The API endpoints are documented in Swagger. Access the documentation by visiting:
+```bash
 http://localhost:8000/swagger/
+```
 
-Key Features
+##Docker Compose
+To run the application using Docker Compose, follow these steps:
+```bash
+docker-compose build
+docker-compose up
+```
+The application will be accessible at 
+```bash
+http://0.0.0.0:8000/
+```
+#Project Functionality
 
-Event Management:
-Create, Read, Update, Delete events.
+##Event Management
+Create, read, update, and delete events.
 Event registration for users.
-User Management:
-Custom user model with email and password.
-Authentication:
-Basic User Registration and Authentication.
-Testing:
+##User Management
+Custom user model for registration with email and password.
+##Authentication
+Basic user registration and authentication.
+##Testing
 Unit tests for API endpoints.
 
-Bonus Features
-
-Docker:
+##Bonus Features
 Containerized application with Docker.
 Docker Compose for easy setup.
-Advanced Features:
-Event search or filtering.
-Email Notifications:
-Send email notifications to users upon event registration.
-Contributors
+Advanced feature: event search or filtering.
+Email notifications to users upon event registration.
 
-https://github.com/Por4ini
+
+##Contributors
+[Sergio Porchini](https://github.com/Por4ini)
